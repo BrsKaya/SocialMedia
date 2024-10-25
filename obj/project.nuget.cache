@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SjavQ1CjuSI=",
+  "dgSpecHash": "D7gMhwaOf8o=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMedia\\SocialMediaApp.csproj",
+  "projectFilePath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kaya_\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kaya_\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.8\\microsoft.data.sqlite.core.7.0.8.nupkg.sha512",

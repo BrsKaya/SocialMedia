@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMedia\\SocialMediaApp.csproj": {}
+    "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMedia\\SocialMediaApp.csproj": {
+    "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMedia\\SocialMediaApp.csproj",
+        "projectUniqueName": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj",
         "projectName": "SocialMediaApp",
-        "projectPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMedia\\SocialMediaApp.csproj",
+        "projectPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj",
         "packagesPath": "C:\\Users\\kaya_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMedia\\obj\\",
+        "outputPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
