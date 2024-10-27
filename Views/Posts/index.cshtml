@@ -1,24 +1,40 @@
-@model List<Post>
+@model PostsViewModel
 
- <div class="container mt-4">
-        <h1 class="mb-4">What's happening?</h1>
+<div class="container mt-4">
+    <div class="row">
         
-        <!-- Post kaydetme formu -->
-        <div class="mb-4">
-            <textarea class="form-control" rows="3" placeholder="Share your thoughts..."></textarea>
-            <button class="btn btn-primary mt-2">Tweet</button>
-        </div>
+        <div class="col-lg-8">
+            <h1 class="mb-4">What's happening?</h1>
 
-        <h2 class="mb-3">Recent Tweets</h2>
-        
-        <!-- Tweet -->
-        @foreach(var post in Model){
-        <div class="post">
-            <h5>User1</h5>
-            <p>@post.Content</p>
-            <small class="text-muted">@post.PublishedOn</small>
-        </div>
-        }
-    </div>
+            <!-- Post sending -->
+            <div class="mb-4">
+                <textarea class="form-control no-resize" rows="3" placeholder="Share your thoughts..." maxlength="300"></textarea>
+                <button class="btn btn-primary mt-2">Post</button>
+            </div>
+
+            <h2 class="mb-3">Recent Posts</h2>
+
     
+            <!-- All Tweets -->
+            @foreach(var post in Model.Posts)
+            {
+                <div class="post mb-4">
+                    <div class ="row">
+                    <!-- Profile photo -->
+                        <div class="col-1">
+                            <img src="~/img/pp.png" class="img-fluid rounded-circle" alt="" />
+                        </div>
+                        
+                        <!-- Nick,Content,Publishedon -->
+                        <div class="col-7">
+                            <h5>User1</h5>
+                            <p>@post.Content</p>
+                            <small class="text-muted">@post.PublishedOn</small>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
 
+    </div>
+</div>
