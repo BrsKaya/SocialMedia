@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SocialMediaApp.Data.Abstract;
 using SocialMediaApp.Data.EfCore;
 using SocialMediaApp.Models;
@@ -15,6 +16,10 @@ namespace SocialMediaApp.Controllers{
                     Posts = _postRepository.Posts.ToList()
                 }
             );
+        }
+
+        public async Task<IActionResult>Details(string url){
+            return View(await _postRepository.Posts.Include(x=>x.Comment).ThenInclude(x=>x.User).FirstOrDefaultAsync(p=>p.Url == url));
         }
 
     }

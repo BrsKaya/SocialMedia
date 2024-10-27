@@ -56,6 +56,9 @@ namespace SocialMediaApp.Migrations
                     b.Property<DateTime>("PublishedOn")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Url")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 

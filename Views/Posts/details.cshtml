@@ -1,0 +1,54 @@
+@model Post
+
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-lg-8">
+            <!-- Tweet -->
+            <div class="post mb-4">
+                <div class="row">
+                    <!-- Profile photo -->
+                    <div class="col-1">
+                        <img src="~/img/pp.png" class="img-fluid rounded-circle" alt="" />
+                    </div>
+
+                    <!-- Nick,Content,Publishedon -->
+                    <div class="col-7">
+                        <h5>Baris</h5>
+                        <p>@Model.Content</p>
+                        <small class="text-muted">@Model.PublishedOn</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white mt-2">
+                <div class="card border-0">
+                    <h6>@Model.Comment.Count() adet yorum var.</h6>
+                </div>
+
+                <div class="card-body">
+                    @foreach (var comment in Model.Comment)
+                    {
+                        <div class="my-4 d-flex">
+                            <img src="/img/@comment.User.Image" class="avatar rounded-circle float-start me-3" alt="">
+                            <div class="mb-2">
+                                <h6>@comment.User.UserName</h6>
+                                <p>@comment.Text</p>
+                                <small class="text-muted">@Model.PublishedOn</small>
+                            </div>   
+                        </div>
+                    }
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-4">
+            <vc:new-posts></vc:new-posts>
+        </div>
+
+
+    </div>
+</div>

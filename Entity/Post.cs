@@ -4,6 +4,8 @@ namespace SocialMediaApp.Entity{
 
         public string? Content{get; set;}
 
+        public string? Url{get; set;}
+
         public DateTime PublishedOn{get; set;}
 
         public int UserId{get; set;}
@@ -12,6 +14,14 @@ namespace SocialMediaApp.Entity{
 
         public List<Comment> Comment{get; set;} = new List<Comment>();
 
+    }
+
+    public class Hashtag
+    {
+        public int HashtagId { get; set; }
+        public string Tag { get; set; } = string.Empty;
+
+        public List<Post> Posts { get; set; } = new List<Post>();
     }
 
 }

@@ -11,7 +11,7 @@ using SocialMediaApp.Data.EfCore;
 namespace SocialMediaApp.Migrations
 {
     [DbContext(typeof(SocialMediaContext))]
-    [Migration("20241025204440_InitialCreate")]
+    [Migration("20241027145918_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -57,6 +57,9 @@ namespace SocialMediaApp.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("PublishedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Url")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")

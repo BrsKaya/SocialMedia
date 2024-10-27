@@ -37,3 +37,12 @@ body {
 .form-control {
     resize: none;
 }
+
+.btn-spacing {
+    margin-right: 20px; /* Like-Comment arası boşluk */
+}
+
+.avatar{
+    width: 2rem;
+    height: 2rem;
+}

@@ -13,8 +13,10 @@ namespace SocialMediaApp.Data.Concreate.EfCore{
                 }
                 if(!context.Users.Any()){    //Users verisi yoksa 
                     context.Users.AddRange(   //tanımlanacak verileri ekle
-                        new User {UserName = "BarisKaya", Image = "pp.png"},
-                        new User {UserName = "Deneme", Image = "pp.png"}
+                        new User {UserName = "BarisKaya", Image = "pp.png",UserId = 1},
+                        new User {UserName = "Umut", Image = "pp.png",UserId = 2},
+                        new User {UserName = "Sena", Image = "pp.png",UserId = 3},
+                        new User {UserName = "Mehmet", Image = "pp.png",UserId = 4}
                     );
                     context.SaveChanges();
                 }
@@ -23,7 +25,13 @@ namespace SocialMediaApp.Data.Concreate.EfCore{
                         new Post {
                             Content = "Yeni sosyal medyamızın ilk gönderisi!!!",
                             PublishedOn = DateTime.Now.AddDays(-10),
-                            UserId = 1
+                            UserId = 1,
+                            Url = "comments",
+                            Comment = new List<Comment>{
+                                new Comment {Text = "Harika!!", PublishedOn = new DateTime(), UserId = 2},
+                                new Comment {Text = "Muhteşem!!", PublishedOn = new DateTime(), UserId = 3},
+                                new Comment {Text = "Başarılar!!", PublishedOn = new DateTime(), UserId = 4}
+                            }
                         }
                     );
                     context.SaveChanges();

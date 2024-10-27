@@ -2,39 +2,63 @@
 
 <div class="container mt-4">
     <div class="row">
-        
+
         <div class="col-lg-8">
             <h1 class="mb-4">What's happening?</h1>
 
             <!-- Post sending -->
             <div class="mb-4">
-                <textarea class="form-control no-resize" rows="3" placeholder="Share your thoughts..." maxlength="300"></textarea>
+                <textarea class="form-control no-resize" rows="3" placeholder="Share your thoughts..."
+                    maxlength="300"></textarea>
                 <button class="btn btn-primary mt-2">Post</button>
             </div>
 
             <h2 class="mb-3">Recent Posts</h2>
 
-    
+
             <!-- All Tweets -->
-            @foreach(var post in Model.Posts)
+            @foreach (var post in Model.Posts)
             {
                 <div class="post mb-4">
-                    <div class ="row">
-                    <!-- Profile photo -->
+                    <div class="row">
+                        <!-- Profile photo -->
                         <div class="col-1">
                             <img src="~/img/pp.png" class="img-fluid rounded-circle" alt="" />
                         </div>
-                        
-                        <!-- Nick,Content,Publishedon -->
+
+                        <!-- Nick, Content, PublishedOn -->
                         <div class="col-7">
-                            <h5>User1</h5>
+                            <h5>
+                                Baris
+                                <span class="text-muted" style="font-size: 0.6em;">(@post.PublishedOn)</span>
+                            </h5>
                             <p>@post.Content</p>
-                            <small class="text-muted">@post.PublishedOn</small>
+
+                            <!-- Like and Comment Buttons -->
+                            <div class="mt-2">
+                                <button class="btn btn-light btn-sm btn-spacing">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+
+                                <a href="/posts/@post.Url" class="post-link">
+                                    <button class="btn btn-light btn-sm btn-spacing">
+                                        <i class="bi bi-chat"></i>
+                                    </button>
+                                </a>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
             }
         </div>
+
+
+        <div class="col-lg-4">
+            <vc:new-posts></vc:new-posts>
+        </div>
+
 
     </div>
 </div>
