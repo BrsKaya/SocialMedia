@@ -20,13 +20,38 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="bg-white mt-2">
+                <h4>Add Comment</h4>
+                <form action="/posts/AddCommentPage" method="post">
+                    <input type="hidden" name="PostId" value="@Model.PostId">
+                    <input type="hidden" name="Url" value="@Model.Url">
+                    <div class="mb-3">
+                        <label for="UserName" class="form-label">UserName</label>
+                        <input type="text" name="UserName" id="UserName" class="form-control" maxlength="30">
+                    </div>
+
+                    <div class="mb-3 row">
+                        <div class="col-9">
+                            <textarea type="text" name="Text" id="Text" rows="1" class="form-control " placeholder="Comment" maxlength="300"></textarea>
+                        </div>
+                        <div class="col-3">
+                            <button type="submit" class="btn btn-secondary ">Add Comment</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
 
             <div class="bg-white mt-2">
+
                 <div class="card border-0">
                     <h6>@Model.Comment.Count() adet yorum var.</h6>
                 </div>
 
+
                 <div class="card-body">
+
                     @foreach (var comment in Model.Comment)
                     {
                         <div class="my-4 d-flex">
@@ -35,9 +60,11 @@
                                 <h6>@comment.User.UserName</h6>
                                 <p>@comment.Text</p>
                                 <small class="text-muted">@Model.PublishedOn</small>
-                            </div>   
+                            </div>
                         </div>
                     }
+
+
                 </div>
 
             </div>
