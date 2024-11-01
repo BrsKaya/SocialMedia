@@ -13,6 +13,7 @@ builder.Services.AddDbContext<SocialMediaContext>(options => {
 });
 
 builder.Services.AddScoped<IPostRepository,EfPostRepository>();
+builder.Services.AddScoped<ICommentRepository,EfCommentRepository>();
 
 var app = builder.Build();
 

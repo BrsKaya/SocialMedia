@@ -11,7 +11,7 @@ using SocialMediaApp.Data.EfCore;
 namespace SocialMediaApp.Migrations
 {
     [DbContext(typeof(SocialMediaContext))]
-    [Migration("20241027145918_InitialCreate")]
+    [Migration("20241101114634_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

@@ -31,7 +31,7 @@ body {
     padding: 15px; /* İç boşluk */
     margin-bottom: 10px; /* Alt boşluk */
     background-color: #fff; /* Post arka plan rengi */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Gölge efekti */
 }
 
 .form-control {
@@ -45,4 +45,18 @@ body {
 .avatar{
     width: 2rem;
     height: 2rem;
+}
+
+.comment-form {
+    max-width: 500px;
+}
+
+.comment-box {
+    resize: none;
+    
+}
+
+.btn-secondary {
+    height: 38px;
+    width: 162px;
 }
