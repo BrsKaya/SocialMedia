@@ -12,20 +12,19 @@
                         <img src="~/img/pp.png" class="img-fluid rounded-circle" alt="" />
                     </div>
 
-                    <!-- Nick,Content,Publishedon -->
+                    <!-- Nick, Content, PublishedOn -->
                     <div class="col-7">
                         <h5>Baris</h5>
                         <p>@Model.Content</p>
-                        <small class="text-muted">@Model.PublishedOn</small>
+                        <small class="text-muted">@Model.PublishedOn.ToString("dd.MM.yyyy HH:mm")</small>
                     </div>
                 </div>
             </div>
-            
+
             <div class="bg-white mt-2">
                 <h4>Add Comment</h4>
                 <form action="/posts/AddCommentPage" method="post">
-                    <input type="hidden" name="PostId" value="@Model.PostId">
-                    <input type="hidden" name="Url" value="@Model.Url">
+                    <input type="hidden" id="PostId" name="PostId" value="@Model.PostId">
                     <div class="mb-3">
                         <label for="UserName" class="form-label">UserName</label>
                         <input type="text" name="UserName" id="UserName" class="form-control" maxlength="30">
@@ -33,49 +32,96 @@
 
                     <div class="mb-3 row">
                         <div class="col-9">
-                            <textarea type="text" name="Text" id="Text" rows="1" class="form-control " placeholder="Comment" maxlength="300"></textarea>
+                            <textarea type="text" name="Text" id="Text" rows="1" class="form-control"
+                                placeholder="Comment" maxlength="300"></textarea>
                         </div>
                         <div class="col-3">
-                            <button type="submit" class="btn btn-secondary ">Add Comment</button>
+                            <button id="btnCommentSave" type="submit" class="btn btn-secondary">Add Comment</button>
                         </div>
                     </div>
                 </form>
-
             </div>
 
             <div class="bg-white mt-2">
-
                 <div class="card border-0">
-                    <h6>@Model.Comment.Count() adet yorum var.</h6>
+                    <h6><span id="commentCount">@Model.Comment.Count()</span> adet yorum var.</h6>
                 </div>
-
 
                 <div class="card-body">
-
-                    @foreach (var comment in Model.Comment)
-                    {
-                        <div class="my-4 d-flex">
-                            <img src="/img/@comment.User.Image" class="avatar rounded-circle float-start me-3" alt="">
-                            <div class="mb-2">
-                                <h6>@comment.User.UserName</h6>
-                                <p>@comment.Text</p>
-                                <small class="text-muted">@Model.PublishedOn</small>
+                    <div id="comments">
+                        @foreach (var comment in Model.Comment)
+                        {
+                            <div class="my-4 d-flex">
+                                <img src="/img/@comment.User.Image" class="avatar rounded-circle float-start me-3" alt="">
+                                <div>
+                                    <div class="mb-2 d-flex">
+                                        <h6 class="me-2">@comment.User.UserName</h6>
+                                        <small>@comment.PublishedOn.ToString("dd.MM.yyyy HH:mm")</small>
+                                    </div>
+                                    <p>@comment.Text</p>
+                                </div>
                             </div>
-                        </div>
-                    }
-
-
+                        }
+                    </div>
                 </div>
-
             </div>
-
         </div>
-
 
         <div class="col-lg-4">
             <vc:new-posts></vc:new-posts>
         </div>
 
-
     </div>
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnCommentSave").click(function (event) {
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("AddCommentPage")',
+                    dataType: 'json',
+                    data: {
+                        PostId: $('#PostId').val(),
+                        UserName: $('#UserName').val(),
+                        Text: $('#Text').val(),
+                    },
+                    success: function (comment) {
+                        var date = new Date(comment.publishedOn);
+
+                        //tarihi 01.11.2024 formatında göstermek için yapılandırma
+                        var formattedDate = date.toLocaleDateString("tr-TR", {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric'
+                        });
+                        var formattedTime = date.toLocaleTimeString("tr-TR", { hour: '2-digit', minute: '2-digit' });
+
+                        //yorumu en üstte görmek için prepend kullanıldı
+                        $("#comments").prepend(`
+                            <div class="my-4 d-flex">
+                                <img src="/img/${comment.avatar}" alt="" class="avatar rounded-circle float-start me-3">
+                                <div>
+                                    <div class="mb-2 d-flex">
+                                        <h6 class="me-2">${comment.username}</h6>
+                                        <small>${formattedDate} ${formattedTime}</small>
+                                    </div>
+                                    <p>${comment.text}</p>
+                                </div>
+                            </div>
+                        `);
+
+                        $("#UserName").val('');
+                        $("#Text").val('');
+
+                        var count = parseInt($("#commentCount").text());
+                        $("#commentCount").text(count + 1);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+}

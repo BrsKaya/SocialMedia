@@ -33,7 +33,7 @@ namespace SocialMediaApp.Controllers
 
             if (post == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
 
             post.Comment = post.Comment.OrderByDescending(c => c.PublishedOn).ToList();
@@ -46,9 +46,8 @@ namespace SocialMediaApp.Controllers
 
         [HttpPost]
         [Route("posts/AddCommentPage")]
-        public IActionResult AddCommentPage(int PostId, string UserName, string Text, string Url)
+        public JsonResult AddCommentPage(int PostId, string UserName, string Text)
         {
-
             var entity = new Comment
             {
                 Text = Text,
@@ -56,11 +55,18 @@ namespace SocialMediaApp.Controllers
                 PostId = PostId,
                 User = new User { UserName = UserName, Image = "pp.png" }
             };
-
+            
             _commentRepository.CreateComment(entity);
-            return Redirect("/posts/" + Url);
-
+            
+            return Json(new
+            {
+                username = entity.User.UserName,      
+                text = entity.Text,                    
+                publishedOn = entity.PublishedOn,      
+                avatar = entity.User.Image             
+            });
         }
+
 
     }
 }
