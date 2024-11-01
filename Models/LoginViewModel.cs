@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace SocialMediaApp{
+namespace SocialMediaApp.Models{
 
     public class LoginViewModel{
 
