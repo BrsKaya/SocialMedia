@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj": {}
+    "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj": {
+    "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
+        "projectUniqueName": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj",
         "projectName": "SocialMediaApp",
-        "projectPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
-        "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\obj\\",
+        "projectPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj",
+        "packagesPath": "C:\\Users\\kaya_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kaya_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

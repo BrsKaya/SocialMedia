@@ -55,17 +55,44 @@ namespace SocialMediaApp.Controllers
                 PostId = PostId,
                 User = new User { UserName = UserName, Image = "pp.png" }
             };
-            
+
             _commentRepository.CreateComment(entity);
-            
+
             return Json(new
             {
-                username = entity.User.UserName,      
-                text = entity.Text,                    
-                publishedOn = entity.PublishedOn,      
-                avatar = entity.User.Image             
+                username = entity.User.UserName,
+                text = entity.Text,
+                publishedOn = entity.PublishedOn,
+                avatar = entity.User.Image
             });
         }
+
+        [HttpPost]
+        [Route("/Create")]
+        public IActionResult Create(PostCreateViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                
+                Random random = new Random(); // rastgele bir tam sayı oluşturma
+                int randomNumber = random.Next(100000, 999999); // 100000 ile 999999 arasında rastgele bir sayı(6 haneli)
+
+                _postRepository.CreatePost(
+                    new Post
+                    {
+                        Content = model.Content,
+                        PublishedOn = DateTime.Now,
+                        UserId = 1,
+                        Url = randomNumber.ToString(),
+                        Comment = new List<Comment>()
+                    }
+                );
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
+
 
 
     }
