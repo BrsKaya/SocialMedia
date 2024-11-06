@@ -2,17 +2,17 @@
 
 <div class="container mt-4">
     <div class="row">
-
+        <!-- Ana İçerik Alanı -->
         <div class="col-lg-8">
-            <!-- Tweet -->
+            <!-- Gönderi -->
             <div class="post mb-4">
                 <div class="row">
-                    <!-- Profile photo -->
+                    <!-- Profil Fotoğrafı -->
                     <div class="col-1">
-                        <img src="~/img/pp.png" class="img-fluid rounded-circle" alt="" />
+                        <img src="~/img/pp.png" class="img-fluid rounded-circle avatar" alt="Profile Picture" />
                     </div>
 
-                    <!-- Nick, Content, PublishedOn -->
+                    <!-- Kullanıcı Adı, İçerik ve Yayınlanma Tarihi -->
                     <div class="col-7">
                         <h5>Baris</h5>
                         <p>@Model.Content</p>
@@ -21,7 +21,8 @@
                 </div>
             </div>
 
-            <div class="bg-white mt-2">
+            <!-- Yorum Ekleme Formu -->
+            <div class="bg-white mt-2 post">
                 <h4>Add Comment</h4>
                 <form action="/posts/AddCommentPage" method="post">
                     <input type="hidden" id="PostId" name="PostId" value="@Model.PostId">
@@ -32,7 +33,7 @@
 
                     <div class="mb-3 row">
                         <div class="col-9">
-                            <textarea type="text" name="Text" id="Text" rows="1" class="form-control"
+                            <textarea type="text" name="Text" id="Text" rows="1" class="form-control comment-box"
                                 placeholder="Comment" maxlength="300"></textarea>
                         </div>
                         <div class="col-3">
@@ -42,7 +43,8 @@
                 </form>
             </div>
 
-            <div class="bg-white mt-2">
+            <!-- Yorumlar Bölümü -->
+            <div class="bg-white mt-2 post">
                 <div class="card border-0">
                     <h6><span id="commentCount">@Model.Comment.Count()</span> adet yorum var.</h6>
                 </div>
@@ -52,7 +54,8 @@
                         @foreach (var comment in Model.Comment)
                         {
                             <div class="my-4 d-flex">
-                                <img src="/img/@comment.User.Image" class="avatar rounded-circle float-start me-3" alt="">
+                                <img src="/img/@comment.User.Image" class="avatar rounded-circle float-start me-3"
+                                    alt="User Avatar">
                                 <div>
                                     <div class="mb-2 d-flex">
                                         <h6 class="me-2">@comment.User.UserName</h6>
@@ -67,10 +70,10 @@
             </div>
         </div>
 
+        <!-- Yeni Gönderiler Bölümü -->
         <div class="col-lg-4">
             <vc:new-posts></vc:new-posts>
         </div>
-
     </div>
 </div>
 
@@ -79,6 +82,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btnCommentSave").click(function (event) {
+                event.preventDefault();
                 $.ajax({
                     type: 'POST',
                     url: '@Url.Action("AddCommentPage")',
@@ -90,28 +94,21 @@
                     },
                     success: function (comment) {
                         var date = new Date(comment.publishedOn);
-
-                        //tarihi 01.11.2024 formatında göstermek için yapılandırma
-                        var formattedDate = date.toLocaleDateString("tr-TR", {
-                            day: '2-digit',
-                            month: '2-digit',
-                            year: 'numeric'
-                        });
+                        var formattedDate = date.toLocaleDateString("tr-TR", { day: '2-digit', month: '2-digit', year: 'numeric' });
                         var formattedTime = date.toLocaleTimeString("tr-TR", { hour: '2-digit', minute: '2-digit' });
 
-                        //yorumu en üstte görmek için prepend kullanıldı
                         $("#comments").prepend(`
-                            <div class="my-4 d-flex">
-                                <img src="/img/${comment.avatar}" alt="" class="avatar rounded-circle float-start me-3">
-                                <div>
-                                    <div class="mb-2 d-flex">
-                                        <h6 class="me-2">${comment.username}</h6>
-                                        <small>${formattedDate} ${formattedTime}</small>
+                                    <div class="my-4 d-flex">
+                                        <img src="/img/${comment.avatar}" alt="User Avatar" class="avatar rounded-circle float-start me-3">
+                                        <div>
+                                            <div class="mb-2 d-flex">
+                                                <h6 class="me-2">${comment.username}</h6>
+                                                <small>${formattedDate} ${formattedTime}</small>
+                                            </div>
+                                            <p>${comment.text}</p>
+                                        </div>
                                     </div>
-                                    <p>${comment.text}</p>
-                                </div>
-                            </div>
-                        `);
+                                `);
 
                         $("#UserName").val('');
                         $("#Text").val('');
@@ -120,7 +117,6 @@
                         $("#commentCount").text(count + 1);
                     }
                 });
-                return false;
             });
         });
     </script>
