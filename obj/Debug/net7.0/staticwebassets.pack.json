@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\Css\\style.css"
     },
     {
+      "Id": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\wwwroot\\Css\\style2.css",
+      "PackagePath": "staticwebassets\\Css\\style2.css"
+    },
+    {
       "Id": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\wwwroot\\img\\pp.png",
       "PackagePath": "staticwebassets\\img\\pp.png"
+    },
+    {
+      "Id": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
       "Id": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.svg",
