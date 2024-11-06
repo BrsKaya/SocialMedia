@@ -1,4 +1,66 @@
+using SocialMediaApp.Data.Abstract;
+using SocialMediaApp.Data.Concreate;
+using SocialMediaApp.Data.Concreate.EfCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+using SocialMediaApp.Data.EfCore;
+using SocialMediaApp.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<SocialMediaContext>(options =>{
+    options.UseSqlite(builder.Configuration["ConnectionStrings:Sql_connection"]);
+});
+
+builder.Services.AddScoped<IPostRepository,EfPostRepository>();
+builder.Services.AddScoped<ICommentRepository,EfCommentRepository>();
+builder.Services.AddScoped<IUserRepository,EfUserRepository>();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options=>{
+    options.LoginPath ="/Users/Login";
+});
+
+
+var app = builder.Build();
+
+app.UseStaticFiles();
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+
+
+SeedData.TestVerileriniDoldur(app);
+
+
+app.MapControllerRoute(
+    name: "post_details",
+    pattern: "blogs/details/{url}",
+    defaults: new {controller = "Posts", action = "Details"}
+);
+app.MapControllerRoute(
+    name: "post_by_tags",
+    pattern: "blogs/tag/{tag}",
+    defaults: new {controller = "Posts", action = "Index"}
+);
+app.MapControllerRoute(
+    name: "user_profile",
+    pattern: "profile/{username}",
+    defaults: new {controller = "Users", action = "Profile"}
+);
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Posts}/{action=Index}/{id?}"
+);
+app.Run();
+
+
+
+////
+/*using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SocialMediaApp.Data.Abstract;
@@ -66,7 +128,7 @@ app.MapControllerRoute(
     pattern: "{controller=Posts}/{action=Index}/{id?}"
 );
 
-app.Run();
+app.Run();*/
 
 
 

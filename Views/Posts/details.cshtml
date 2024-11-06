@@ -27,7 +27,6 @@
                     <input type="hidden" id="PostId" name="PostId" value="@Model.PostId">
                     <div class="mb-3">
                         <label for="UserName" class="form-label">UserName</label>
-                        <input type="text" name="UserName" id="UserName" class="form-control" maxlength="30">
                     </div>
 
                     <div class="mb-3 row">
@@ -44,12 +43,12 @@
 
             <div class="bg-white mt-2">
                 <div class="card border-0">
-                    <h6><span id="commentCount">@Model.Comment.Count()</span> adet yorum var.</h6>
+                    <h6><span id="commentCount">@Model.Comments.Count()</span> adet yorum var.</h6>
                 </div>
 
                 <div class="card-body">
                     <div id="comments">
-                        @foreach (var comment in Model.Comment)
+                        @foreach (var comment in Model.Comments)
                         {
                             <div class="my-4 d-flex">
                                 <img src="/img/@comment.User.Image" class="avatar rounded-circle float-start me-3" alt="">

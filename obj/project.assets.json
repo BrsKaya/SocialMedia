@@ -1270,11 +1270,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
+      "projectUniqueName": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\SocialMediaApp.csproj",
       "projectName": "SocialMediaApp",
-      "projectPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
+      "projectPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\SocialMediaApp.csproj",
       "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\obj\\",
+      "outputPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",

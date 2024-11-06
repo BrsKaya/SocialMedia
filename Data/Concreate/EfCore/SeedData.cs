@@ -101,7 +101,7 @@ namespace SocialMediaApp.Data.Concreate.EfCore {
                             PublishedOn = DateTime.Now.AddDays(-10),
                             UserId = 1,
                             Url = "comments",
-                            Comment = new List<Comment> {
+                            Comments = new List<Comment> {
                                 new Comment { Text = "Harika!!", PublishedOn = DateTime.Now, UserId = 2 },
                                 new Comment { Text = "Muhteşem!!", PublishedOn = DateTime.Now, UserId = 3 },
                                 new Comment { Text = "Başarılar!!", PublishedOn = DateTime.Now, UserId = 4 }

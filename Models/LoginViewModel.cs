@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SocialMediaApp.Models{
 
-    /*public class LoginViewModel{
+    public class LoginViewModel{
 
         [Required]
         [EmailAddress]
@@ -11,35 +11,12 @@ namespace SocialMediaApp.Models{
 
         [Required]
         [DataType(DataType.Password)]
-        
+        [StringLength(10, ErrorMessage = "{0} alanı en az {2} karakter uzunluğunda olmalıdır", MinimumLength = 6)]
         [Display(Name = "Parola")]
         public string? Password {get;set;}
-    }*/
-
-    public class LoginViewModel
-    {
-        [Required]
-        [EmailAddress]
-        public string? Email { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
-        public string? Password { get; set; }
+    }
     }
 
-    public class RegisterViewModel
-    {
-        [Required]
-        [EmailAddress]
-        public string? Email { get; set; }
+    
 
-        [Required]
-        [DataType(DataType.Password)]
-        public string? Password { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Şifreler eşleşmiyor.")]
-        public string? ConfirmPassword { get; set; }
-    }
-}
+    

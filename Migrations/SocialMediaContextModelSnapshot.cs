@@ -53,7 +53,19 @@ namespace SocialMediaApp.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("PublishedOn")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Url")
@@ -75,7 +87,16 @@ namespace SocialMediaApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Image")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Password")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserName")
@@ -89,7 +110,7 @@ namespace SocialMediaApp.Migrations
             modelBuilder.Entity("SocialMediaApp.Entity.Comment", b =>
                 {
                     b.HasOne("SocialMediaApp.Entity.Post", "Post")
-                        .WithMany("Comment")
+                        .WithMany("Comments")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -118,7 +139,7 @@ namespace SocialMediaApp.Migrations
 
             modelBuilder.Entity("SocialMediaApp.Entity.Post", b =>
                 {
-                    b.Navigation("Comment");
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("SocialMediaApp.Entity.User", b =>

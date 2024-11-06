@@ -1,24 +1,31 @@
 @model LoginViewModel
 @using SocialMediaApp.Models
 
+
+
 <div class="row">
     <div class="col-12">
         <div class="bg-white p-4">
             <h2>Giriş Yap</h2>
             <form asp-action="Login" method="post">
-                <div asp-validation-summary="All" class="text -danger"></div>
+                <div asp-validation-summary="All" class="text-danger"></div>
                 <div>
                     <label asp-for="Email" class="form-label"></label>
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
-                    <label asp-for="Password" class="form form-label"></label>
-                    <input asp-for="Password" class="form form-control"/>
-                    <span asp-validation-for="Password" class="text -danger"></span>
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
-                <button type="submit">Giriş Yap</button>
+                <button type="submit" class="btn btn-primary">Giriş Yap</button>
             </form>
+
+            <!-- Kayıt Ol Butonu -->
+            <div class="mt-3">
+                <p>Hesabınız yok mu? <a asp-controller="Users" asp-action="Register">Kayıt Ol</a></p>
+            </div>
         </div>
     </div>
 </div>
