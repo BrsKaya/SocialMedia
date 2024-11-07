@@ -4,8 +4,6 @@
     Layout = null;
 }
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,10 +23,23 @@
             <form asp-action="Register" method="post">
                 <h1>Create Account</h1>
                 <span>Use your email for registration</span>
+
+                <!-- Name Input -->
+                <input type="text" asp-for="Name" placeholder="Name" />
+                <span asp-validation-for="Name"></span>
+
+                <!-- Username Input -->
+                <input type="text" asp-for="Username" placeholder="Username" />
+                <span asp-validation-for="Username"></span>
+
+                <!-- Email Input -->
                 <input type="email" asp-for="Email" placeholder="Email" />
                 <span asp-validation-for="Email"></span>
+
+                <!-- Password Input -->
                 <input type="password" asp-for="Password" placeholder="Password" />
                 <span asp-validation-for="Password"></span>
+
                 <button type="submit">Sign Up</button>
             </form>
         </div>
