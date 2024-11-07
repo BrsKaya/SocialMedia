@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\kaya_\Documents\GitHub\BootcampFestGroup1\SocialMediaApp\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\kaya_\Documents\GitHub\BootcampFestGroup1\SocialMediaApp\bin\Debug\net7.0\appsettings.json
 C:\Users\kaya_\Documents\GitHub\BootcampFestGroup1\SocialMediaApp\bin\Debug\net7.0\SocialMediaApp.exe
@@ -269,6 +270,8 @@ C:\Users\senad\OneDrive - Muğla Sıtkı Koçman Üniversitesi\Belgeler\GitHub\B
 C:\Users\senad\OneDrive - Muğla Sıtkı Koçman Üniversitesi\Belgeler\GitHub\BootcampFestGroup1new\SocialMediaApp\obj\Debug\net7.0\SocialMediaApp.genruntimeconfig.cache
 C:\Users\senad\OneDrive - Muğla Sıtkı Koçman Üniversitesi\Belgeler\GitHub\BootcampFestGroup1new\SocialMediaApp\obj\Debug\net7.0\ref\SocialMediaApp.dll
 <<<<<<< HEAD
+=======
+>>>>>>> sena
 C:\Users\senad\OneDrive - Muğla Sıtkı Koçman Üniversitesi\Belgeler\GitHub\BootcampFestGroup1new\SocialMediaApp\SocialMediaApp\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\senad\OneDrive - Muğla Sıtkı Koçman Üniversitesi\Belgeler\GitHub\BootcampFestGroup1new\SocialMediaApp\SocialMediaApp\bin\Debug\net7.0\appsettings.json
 C:\Users\senad\OneDrive - Muğla Sıtkı Koçman Üniversitesi\Belgeler\GitHub\BootcampFestGroup1new\SocialMediaApp\SocialMediaApp\bin\Debug\net7.0\libman.json

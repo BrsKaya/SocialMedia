@@ -100,13 +100,10 @@ namespace SocialMediaApp.Data.Concreate.EfCore {
                             Content = "Yeni sosyal medyamızın ilk gönderisi!!!",
                             PublishedOn = DateTime.Now.AddDays(-10),
                             UserId = 1,
-<<<<<<< HEAD
+
                             Url = "comments",
                             Comments = new List<Comment> {
-=======
-                            Url = "111111",
-                            Comment = new List<Comment> {
->>>>>>> main
+
                                 new Comment { Text = "Harika!!", PublishedOn = DateTime.Now, UserId = 2 },
                                 new Comment { Text = "Muhteşem!!", PublishedOn = DateTime.Now, UserId = 3 },
                                 new Comment { Text = "Başarılar!!", PublishedOn = DateTime.Now, UserId = 4 }

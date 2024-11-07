@@ -8,5 +8,12 @@ namespace SocialMediaApp.Data.Abstract
         IQueryable<Post> Posts { get; }
 
         void CreatePost(Post post);
+<<<<<<< HEAD
+=======
+
+         void EditPost(Post post);
+        void EditPost(Post post, int[] PostId);
+
+>>>>>>> sena
     }
 }
