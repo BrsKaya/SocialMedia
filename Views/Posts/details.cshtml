@@ -21,23 +21,20 @@
                 </div>
             </div>
 
-            <!-- Yorum Ekleme Formu (Twitter tarzı) -->
+            <!-- Yorum Ekleme Formu -->
             <div class="bg-white mt-2 post">
                 <h4>Add Comment</h4>
                 <form action="/posts/AddCommentPage" method="post">
                     <input type="hidden" id="PostId" name="PostId" value="@Model.PostId">
                     <div class="mb-3">
-<<<<<<< HEAD
+
                         <div class="d-flex align-items-center">
                             <img src="~/img/pp.png" class="avatar rounded-circle me-3" alt="Profile Picture"
                                 style="width: 40px; height: 40px;">
                             <textarea type="text" name="Text" id="Text" rows="3" class="form-control comment-box"
                                 placeholder="Comment your thoughts..." maxlength="300"></textarea>
                         </div>
-=======
-                        <label for="UserName" class="form-label">UserName</label>
-                        <input type="text" name="UserName" id="UserName" class="form-control" maxlength="30">
->>>>>>> 2655c73d3ab076940c29c620feca9caf2bbf2684
+
                     </div>
                     <!-- Butonu sağa hizalama -->
                     <div class="d-flex justify-content-end">
