@@ -1,11 +1,17 @@
-@model LoginViewModel
+
+@model RegisterViewModel
 @using SocialMediaApp.Models
 @{
     Layout = null;
 }
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
+=======
+
+
+>>>>>>> 2655c73d3ab076940c29c620feca9caf2bbf2684
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,12 +30,21 @@
         <div class="form-container sign-up">
             <form asp-action="Register" method="post">
                 <h1>Create Account</h1>
-                <span>Use your email for registration</span>
-                <input type="email" asp-for="Email" placeholder="Email" />
-                <span asp-validation-for="Email"></span>
-                <input type="password" asp-for="Password" placeholder="Password" />
-                <span asp-validation-for="Password"></span>
-                <button type="submit">Sign Up</button>
+            <span>Use your email for registration</span>
+
+            <input type="text" asp-for="Name" placeholder="Name" />
+            <span asp-validation-for="Name"></span>
+
+            <input type="text" asp-for="UserName" placeholder="Username" />
+            <span asp-validation-for="UserName"></span>
+
+            <input type="email" asp-for="Email" placeholder="Email" />
+            <span asp-validation-for="Email"></span>
+
+            <input type="password" asp-for="Password" placeholder="Password" />
+            <span asp-validation-for="Password"></span>
+
+            <button type="submit">Sign Up</button>
             </form>
         </div>
 
@@ -59,6 +74,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <<<<<<< HEAD <!-- Kayıt Ol Butonu -->
             <div class="mt-3">
                 <p>Hesabınız yok mu? <a asp-controller="Users" asp-action="Register">Kayıt Ol</a></p>
@@ -68,6 +84,8 @@
                 <p>Zaten bir hesabınız var mı? <a asp-controller="Users" asp-action="Login">Giriş Yap</a></p>
             </div>
 
+=======
+>>>>>>> 2655c73d3ab076940c29c620feca9caf2bbf2684
     </div>
 
     <script src="~/js/script.js" asp-append-version="true"></script>
