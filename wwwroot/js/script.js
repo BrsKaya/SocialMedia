@@ -8,4 +8,8 @@ registerBtn.addEventListener('click', () => {
 
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active"); // Burada .active olarak düzeltildi
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> dogukan

@@ -18,26 +18,35 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\senad\OneDrive - Muğla Sıtkı Koçman Üniversitesi\Belgeler\GitHub\BootcampFestGroup1new\SocialMediaApp\SocialMediaApp
 build_property._RazorSourceGeneratorDebug = 
 
+<<<<<<< HEAD
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/Posts/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcY3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> dogukan
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/Posts/details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcZGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/Posts/edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcZWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> dogukan
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/Posts/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/Posts/list.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcbGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> dogukan
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/Shared/Components/NewPosts/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmV3UG9zdHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,6 +59,7 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/Users/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,6 +68,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> dogukan
 [C:/Users/senad/OneDrive - Muğla Sıtkı Koçman Üniversitesi/Belgeler/GitHub/BootcampFestGroup1new/SocialMediaApp/SocialMediaApp/Views/_Viewimports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdpbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

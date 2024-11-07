@@ -1265,11 +1265,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\senad\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\mehme\\.nuget\\packages\\": {}
+>>>>>>> dogukan
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\SocialMediaApp.csproj",
       "projectName": "SocialMediaApp",
       "projectPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\SocialMediaApp.csproj",
@@ -1278,6 +1283,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\mehme\\Documents\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
+      "projectName": "SocialMediaApp",
+      "projectPath": "C:\\Users\\mehme\\Documents\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
+      "packagesPath": "C:\\Users\\mehme\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mehme\\Documents\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\mehme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> dogukan
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
