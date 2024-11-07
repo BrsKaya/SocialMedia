@@ -11,13 +11,8 @@ using SocialMediaApp.Data.EfCore;
 namespace SocialMediaApp.Migrations
 {
     [DbContext(typeof(SocialMediaContext))]
-<<<<<<<< HEAD:Migrations/20241106204912_InitialMigration.Designer.cs
-    [Migration("20241106204912_InitialMigration")]
-    partial class InitialMigration
-========
-    [Migration("20241102200452_InitialCreate")]
+    [Migration("20241107223039_InitialCreate")]
     partial class InitialCreate
->>>>>>>> main:Migrations/20241102200452_InitialCreate.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,9 +56,6 @@ namespace SocialMediaApp.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Image")
                         .HasColumnType("TEXT");
 
@@ -71,9 +63,6 @@ namespace SocialMediaApp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PublishedOn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Url")

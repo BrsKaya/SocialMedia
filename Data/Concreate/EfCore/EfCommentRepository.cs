@@ -12,9 +12,9 @@ namespace SocialMediaApp.Data.Concreate{
         }
         public IQueryable<Comment> Comments => _context.Comments;
 
-        public void CreateComment(Comment comment)
+        public void CreateComment(Comment Comment)
         {
-            _context.Comments.Add(comment);
+            _context.Comments.Add(Comment);
             _context.SaveChanges();
         }
     }

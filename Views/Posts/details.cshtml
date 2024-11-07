@@ -14,38 +14,38 @@
 
                     <!-- Kullanıcı Adı, İçerik ve Yayınlanma Tarihi -->
                     <div class="col-7">
-                        <h5>Baris</h5>
+                        <h5>@Model.User.UserName</h5>
                         <p>@Model.Content</p>
                         <small class="text-muted">@Model.PublishedOn.ToString("dd.MM.yyyy HH:mm")</small>
                     </div>
                 </div>
             </div>
 
-            <!-- Yorum Ekleme Formu -->
+            <!-- Yorum Ekleme Formu (Twitter tarzı) -->
             <div class="bg-white mt-2 post">
                 <h4>Add Comment</h4>
                 <form action="/posts/AddCommentPage" method="post">
                     <input type="hidden" id="PostId" name="PostId" value="@Model.PostId">
                     <div class="mb-3">
-                        <label for="UserName" class="form-label">UserName</label>
+                        <div class="d-flex align-items-center">
+                            <img src="~/img/pp.png" class="avatar rounded-circle me-3" alt="Profile Picture"
+                                style="width: 40px; height: 40px;">
+                            <textarea type="text" name="Text" id="Text" rows="3" class="form-control comment-box"
+                                placeholder="Comment your thoughts..." maxlength="300"></textarea>
+                        </div>
                     </div>
-
-                    <div class="mb-3 row">
-                        <div class="col-9">
-                            <textarea type="text" name="Text" id="Text" rows="1" class="form-control comment-box"
-                                placeholder="Comment" maxlength="300"></textarea>
-                        </div>
-                        <div class="col-3">
-                            <button id="btnCommentSave" type="submit" class="btn btn-secondary">Add Comment</button>
-                        </div>
+                    <!-- Butonu sağa hizalama -->
+                    <div class="d-flex justify-content-end">
+                        <button id="btnCommentSave" type="submit" class="btn btn-primary">Comment</button>
                     </div>
                 </form>
             </div>
 
+
             <!-- Yorumlar Bölümü -->
             <div class="bg-white mt-2 post">
                 <div class="card border-0">
-                    <h6><span id="commentCount">@Model.Comments.Count()</span> adet yorum var.</h6>
+                    <h6><span id="commentCount">@Model.Comments.Count()</span> yorum</h6>
                 </div>
 
                 <div class="card-body">
@@ -58,12 +58,14 @@
                                 <div>
                                     <div class="mb-2 d-flex">
                                         <h6 class="me-2">@comment.User.UserName</h6>
-                                        <small>@comment.PublishedOn.ToString("dd.MM.yyyy HH:mm")</small>
+                                        <h6 class="text-muted" style="font-size: 0.900rem;">
+                                            @comment.PublishedOn.ToString("dd.MM.yyyy HH:mm")</h6>
                                     </div>
                                     <p>@comment.Text</p>
                                 </div>
                             </div>
                         }
+
                     </div>
                 </div>
             </div>
@@ -88,7 +90,6 @@
                     dataType: 'json',
                     data: {
                         PostId: $('#PostId').val(),
-                        UserName: $('#UserName').val(),
                         Text: $('#Text').val(),
                     },
                     success: function (comment) {
@@ -109,11 +110,10 @@
                                     </div>
                                 `);
 
-                        $("#UserName").val('');
-                        $("#Text").val('');
+                        $("#Text").val('');  // Yorum kutusunu temizle
 
                         var count = parseInt($("#commentCount").text());
-                        $("#commentCount").text(count + 1);
+                        $("#commentCount").text(count + 1);  // Yorum sayısını artır
                     }
                 });
             });

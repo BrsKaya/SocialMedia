@@ -26,8 +26,6 @@ namespace SocialMediaApp.Data.Concreate{
             var entity = _context.Posts.FirstOrDefault(i=>i.PostId == post.PostId);
 
             if(entity != null){
-                entity.Title = post.Title;
-                entity.Description = post.Description;
                 entity.Content = post.Content;
                 entity.Url = post.Url;
                 entity.IsActive = post.IsActive;
@@ -41,13 +39,9 @@ namespace SocialMediaApp.Data.Concreate{
              var entity = _context.Posts.FirstOrDefault(i=>i.PostId == post.PostId);
 
             if(entity != null){
-                entity.Title = post.Title;
-                entity.Description = post.Description;
                 entity.Content = post.Content;
                 entity.Url = post.Url;
-                entity.IsActive = post.IsActive;
-
-                
+                entity.IsActive = post.IsActive;          
 
                 _context.SaveChanges();
             }

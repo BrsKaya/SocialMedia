@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SocialMediaApp.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,8 +34,6 @@ namespace SocialMediaApp.Migrations
                 {
                     PostId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Title = table.Column<string>(type: "TEXT", nullable: true),
-                    Description = table.Column<string>(type: "TEXT", nullable: true),
                     Content = table.Column<string>(type: "TEXT", nullable: true),
                     Url = table.Column<string>(type: "TEXT", nullable: true),
                     Image = table.Column<string>(type: "TEXT", nullable: true),

@@ -53,9 +53,6 @@ namespace SocialMediaApp.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Image")
                         .HasColumnType("TEXT");
 
@@ -63,9 +60,6 @@ namespace SocialMediaApp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PublishedOn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Title")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Url")

@@ -9,8 +9,12 @@
             <!-- Post sending -->
             <form action="Create" method="post">
                 <div class="mb-4">
-                    <textarea name="content" class="form-control no-resize" rows="3" placeholder="Share your thoughts..." maxlength="300"></textarea>
-                    <button type="submit" class="btn btn-primary mt-2">Post</button>
+                    <textarea name="content" class="form-control no-resize" rows="3"
+                        placeholder="Share your thoughts..." maxlength="300"></textarea>
+                    <div class="text-end mt-2">
+                        <button type="submit" class="btn btn-primary w-25">Post</button>
+                    </div>
+
                 </div>
             </form>
 
@@ -29,7 +33,7 @@
                         <!-- Nick, Content, PublishedOn -->
                         <div class="col-7">
                             <h5>
-                                Baris
+                                @post.User.UserName
                                 <span class="text-muted" style="font-size: 0.6em;">(@post.PublishedOn.ToString("g"))</span>
                             </h5>
                             <p>@post.Content</p>
@@ -43,6 +47,7 @@
                                 <a href="/posts/@post.Url" class="post-link">
                                     <button class="btn btn-light btn-sm btn-spacing">
                                         <i class="bi bi-chat"></i>
+                                        <span id="commentCount">@post.Comments.Count()</span>
                                     </button>
                                 </a>
 

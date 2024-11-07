@@ -37,14 +37,10 @@ SeedData.TestVerileriniDoldur(app);
 
 app.MapControllerRoute(
     name: "post_details",
-    pattern: "blogs/details/{url}",
+    pattern: "posts/{url}",
     defaults: new {controller = "Posts", action = "Details"}
 );
-app.MapControllerRoute(
-    name: "post_by_tags",
-    pattern: "blogs/tag/{tag}",
-    defaults: new {controller = "Posts", action = "Index"}
-);
+
 app.MapControllerRoute(
     name: "user_profile",
     pattern: "profile/{username}",

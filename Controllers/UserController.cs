@@ -76,7 +76,7 @@ namespace SocialMediaApp.Controllers
                     userClaims.Add(new Claim(ClaimTypes.GivenName, isUser.Name ?? ""));
                     userClaims.Add(new Claim(ClaimTypes.UserData, isUser.Image ?? ""));
 
-                    if(isUser.Email == "info@ahmetkaya.com"){
+                    if(isUser.Email == "baris@info.com"){
                         userClaims.Add(new Claim(ClaimTypes.Role, "admin"));
                     }
 

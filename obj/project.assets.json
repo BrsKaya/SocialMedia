@@ -1265,34 +1265,24 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\senad\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\mehme\\.nuget\\packages\\": {}
->>>>>>> dogukan
+    "C:\\Users\\kaya_\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\SocialMediaApp.csproj",
+      "projectUniqueName": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj",
       "projectName": "SocialMediaApp",
-      "projectPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\SocialMediaApp.csproj",
-      "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\obj\\",
+      "projectPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\SocialMediaApp.csproj",
+      "packagesPath": "C:\\Users\\kaya_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kaya_\\Documents\\GitHub\\SocialMediaApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\mehme\\Documents\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
-      "projectName": "SocialMediaApp",
-      "projectPath": "C:\\Users\\mehme\\Documents\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp.csproj",
-      "packagesPath": "C:\\Users\\mehme\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mehme\\Documents\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\mehme\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> dogukan
+        "C:\\Users\\kaya_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1300,6 +1290,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1356,13 +1347,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

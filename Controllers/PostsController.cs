@@ -22,9 +22,14 @@ namespace SocialMediaApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var posts = _postRepository.Posts.Where(i => i.IsActive);
+            var posts = _postRepository.Posts
+                .Where(i => i.IsActive)  
+                .Include(p => p.Comments)
+                .Include(p => p.User);
+
             return View(new PostsViewModel { Posts = await posts.ToListAsync() });
         }
+
 
         public async Task<IActionResult> Details(string url)
         {
@@ -44,7 +49,9 @@ namespace SocialMediaApp.Controllers
         }
 
         [HttpPost]
-        public JsonResult AddComment(int postId, string text)
+        [Authorize]
+        [Route("posts/AddCommentPage")]
+        public JsonResult AddCommentPage(int postId, string text)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var username = User.FindFirstValue(ClaimTypes.Name);
@@ -77,23 +84,24 @@ namespace SocialMediaApp.Controllers
 
         [HttpPost]
         [Authorize]
+        [Route("/Create")]
         public IActionResult Create(PostCreateViewModel model)
         {
             if (ModelState.IsValid)
             {
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                Random random = new Random(); // rastgele bir tam sayı oluşturma
+                int randomNumber = random.Next(100000, 999999); // 100000 ile 999999 arasında rastgele bir sayı(6 haneli)
 
                 _postRepository.CreatePost(
                     new Post
                     {
-                        Title = model.Title,
                         Content = model.Content,
-                        Description = model.Description,
-                        Url = model.Url,
+                        Url = randomNumber.ToString(),
                         UserId = int.Parse(userId ?? ""),
                         PublishedOn = DateTime.Now,
                         Image = "1.png",
-                        IsActive = false
+                        IsActive = true
                     }
                 );
 
@@ -134,9 +142,6 @@ namespace SocialMediaApp.Controllers
 
             return View(new PostCreateViewModel
             {
-                PostId = post.PostId,
-                Title = post.Title,
-                Description = post.Description,
                 Content = post.Content,
                 Url = post.Url,
                 IsActive = post.IsActive
@@ -151,9 +156,6 @@ namespace SocialMediaApp.Controllers
             {
                 var entityToUpdate = new Post
                 {
-                    PostId = model.PostId,
-                    Title = model.Title,
-                    Description = model.Description,
                     Content = model.Content,
                     Url = model.Url
                 };
@@ -169,119 +171,6 @@ namespace SocialMediaApp.Controllers
 
             return View(model);
         }
+
     }
 }
-
-
-/*using System.Security.Claims;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SocialMediaApp.Data.Abstract;
-using SocialMediaApp.Data.EfCore;
-using SocialMediaApp.Entity;
-using SocialMediaApp.Models;
-
-namespace SocialMediaApp.Controllers
-{
-    public class PostsController : Controller
-    {
-        private IPostRepository _postRepository;
-        private ICommentRepository _commentRepository;
-        public PostsController(IPostRepository postRepository, ICommentRepository commentRepository)
-        {
-            _postRepository = postRepository;
-            _commentRepository = commentRepository;
-        }
-        public async Task<IActionResult> Index()
-        {
-            var posts = _postRepository.Posts;
-            return View(
-                new PostsViewModel
-                {
-                    Posts = await posts.ToListAsync()
-                }
-            );
-        }
-
-        public async Task<IActionResult> Details(string url)
-        {
-            var post = await _postRepository.Posts.Include(x => x.Comment).ThenInclude(x => x.User).FirstOrDefaultAsync(p => p.Url == url);
-
-            if (post == null)
-            {
-                return NotFound();
-            }
-
-            post.Comment = post.Comment.OrderByDescending(c => c.PublishedOn).ToList();
-
-            return View(post);
-        }
-
-
-
-
-        [HttpPost]
-        [Route("posts/AddCommentPage")]
-        public JsonResult AddCommentPage(int PostId, string UserName, string Text)
-        {
-            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var username = User.FindFirstValue(ClaimTypes.Name);
-             var avatar = User.FindFirstValue(ClaimTypes.UserData);
-
-            var entity = new Comment
-            {
-                Text = Text,
-                PublishedOn = DateTime.Now,
-                PostId = PostId,
-                UserId = int.Parse(UserId ?? "")
-                //User = new User { UserName = UserName, Image = "pp.png" }
-            };
-
-            _commentRepository.CreateComment(entity);
-
-            return Json(new
-            {
-<<<<<<< HEAD
-                username,
-                Text,
-                entity.PublishedOn,
-                avatar       
-=======
-                username = entity.User.UserName,
-                text = entity.Text,
-                publishedOn = entity.PublishedOn,
-                avatar = entity.User.Image
->>>>>>> main
-            });
-        }
-
-        [HttpPost]
-        [Route("/Create")]
-        public IActionResult Create(PostCreateViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                
-                Random random = new Random(); // rastgele bir tam sayı oluşturma
-                int randomNumber = random.Next(100000, 999999); // 100000 ile 999999 arasında rastgele bir sayı(6 haneli)
-
-                _postRepository.CreatePost(
-                    new Post
-                    {
-                        Content = model.Content,
-                        PublishedOn = DateTime.Now,
-                        UserId = 1,
-                        Url = randomNumber.ToString(),
-                        Comment = new List<Comment>()
-                    }
-                );
-                return RedirectToAction("Index");
-            }
-            return View(model);
-        }
-
-
-
-
-    }
-}*/
