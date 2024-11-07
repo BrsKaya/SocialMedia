@@ -33,12 +33,5 @@
     "C:\\Users\\senad\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\senad\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\senad\\OneDrive - Muğla Sıtkı Koçman Üniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
