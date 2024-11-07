@@ -1,18 +1,25 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace SocialMediaApp.Models{
-
-    public class LoginViewModel{
-
+namespace SocialMediaApp.Models
+{
+    public class LoginViewModel
+    {
+        // Common fields for both login and register actions
         [Required]
         [EmailAddress]
-        [Display(Name = "Eposta")]
-        public string? Email {get;set;}
+        [Display(Name = "Email")]
+        public string? Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        
-        [Display(Name = "Parola")]
-        public string? Password {get;set;}
+        [Display(Name = "Password")]
+        public string? Password { get; set; }
+
+        // Registration-only fields
+        [Display(Name = "Name")]
+        public string? Name { get; set; }
+
+        [Display(Name = "Username")]
+        public string? Username { get; set; }
     }
 }
