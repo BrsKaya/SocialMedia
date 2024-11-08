@@ -11,13 +11,8 @@ using SocialMediaApp.Data.EfCore;
 namespace SocialMediaApp.Migrations
 {
     [DbContext(typeof(SocialMediaContext))]
-<<<<<<<< HEAD:Migrations/20241107223039_InitialCreate.Designer.cs
-    [Migration("20241107223039_InitialCreate")]
+    [Migration("20241108132003_InitialCreate")]
     partial class InitialCreate
-========
-    [Migration("20241107200307_InitialMigration")]
-    partial class InitialMigration
->>>>>>>> 2655c73d3ab076940c29c620feca9caf2bbf2684:Migrations/20241107200307_InitialMigration.Designer.cs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
