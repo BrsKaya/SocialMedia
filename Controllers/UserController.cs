@@ -45,7 +45,7 @@ namespace SocialMediaApp.Controllers
                         Name = model.Name,
                         Email = model.Email,
                         Password = model.Password,
-                        Image = "avatar.jpg"
+                        Image = "pp.png"
                     });
                      return RedirectToAction("Login");
                 }else{
