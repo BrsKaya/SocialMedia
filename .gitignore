@@ -1,3 +1,41 @@
 SocialMedia.db
+# .NET Core için genel ayarlar
 bin/
 obj/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# Üçüncü parti paketler
+packages/
+*.nupkg
+*.snupkg
+
+# Proje dosyaları
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.DS_Store
+
+# Rider için özel ayarlar
+.idea/
+*.sln.iml
+
+# MacOS, Windows ve Linux için geçici dosyalar
+*.DS_Store
+*.directory
+Thumbs.db
+
+# Log dosyaları
+*.log
+
+# Config ve güvenlik bilgileri
+appsettings*.json
+
+# Visual Studio Code uzantıları
+.vscode/extensions.json
+.vscode/settings.json
+.vscode/tasks.json
