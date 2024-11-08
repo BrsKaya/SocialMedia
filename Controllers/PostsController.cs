@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SocialMediaApp.Controllers
 {
+    [Authorize]
     public class PostsController : Controller
     {
         private readonly IPostRepository _postRepository;
@@ -29,7 +30,6 @@ namespace SocialMediaApp.Controllers
 
             return View(new PostsViewModel { Posts = await posts.ToListAsync() });
         }
-
 
         public async Task<IActionResult> Details(string url)
         {

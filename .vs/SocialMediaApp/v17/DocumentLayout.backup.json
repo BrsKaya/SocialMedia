@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|c:\\users\\senad\\onedrive - mu\u011Fla s\u0131tk\u0131 ko\u00E7man \u00FCniversitesi\\belgeler\\github\\bootcampfestgroup1new\\socialmediaapp\\socialmediaapp\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|solutionrelative:controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|c:\\users\\senad\\onedrive - mu\u011Fla s\u0131tk\u0131 ko\u00E7man \u00FCniversitesi\\belgeler\\github\\bootcampfestgroup1new\\socialmediaapp\\socialmediaapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|c:\\users\\senad\\onedrive - mu\u011Fla s\u0131tk\u0131 ko\u00E7man \u00FCniversitesi\\belgeler\\github\\bootcampfestgroup1new\\socialmediaapp\\socialmediaapp\\views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|solutionrelative:views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|c:\\users\\senad\\onedrive - mu\u011Fla s\u0131tk\u0131 ko\u00E7man \u00FCniversitesi\\belgeler\\github\\bootcampfestgroup1new\\socialmediaapp\\socialmediaapp\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47D06D21-456D-40A8-949A-A48F0F7D7C1B}|SocialMediaApp.csproj|solutionrelative:views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostsController.cs",
+              "DocumentMoniker": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Controllers\\PostsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PostsController.cs",
+              "ToolTip": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Controllers\\PostsController.cs",
+              "RelativeToolTip": "Controllers\\PostsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T19:56:27.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Views\\Posts\\index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Posts\\index.cshtml",
+              "ToolTip": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Views\\Posts\\index.cshtml",
+              "RelativeToolTip": "Views\\Posts\\index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-08T19:53:29.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Views\\Users\\login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\login.cshtml",
+              "ToolTip": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Views\\Users\\login.cshtml",
+              "RelativeToolTip": "Views\\Users\\login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-08T19:51:20.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\senad\\OneDrive - Mu\u011Fla S\u0131tk\u0131 Ko\u00E7man \u00DCniversitesi\\Belgeler\\GitHub\\BootcampFestGroup1new\\SocialMediaApp\\SocialMediaApp\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAIAwwKQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T19:45:49.069Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
