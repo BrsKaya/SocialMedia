@@ -1,6 +1,4 @@
-
-@model RegisterViewModel
-@using SocialMediaApp.Models
+@model SocialMediaApp.Models.LoginActionViewModel
 @{
     Layout = null;
 }
@@ -17,27 +15,28 @@
 </head>
 
 <body>
-
     <div class="container" id="container">
         <!-- Register Form -->
         <div class="form-container sign-up">
             <form asp-action="Register" method="post">
                 <h1>Create Account</h1>
-            <span>Use your email for registration</span>
+                <span>Use your email for registration</span>
+                <input type="text" asp-for="Register.Name" placeholder="Name" />
+                <span asp-validation-for="Register.Name"></span>
 
-            <input type="text" asp-for="Name" placeholder="Name" />
-            <span asp-validation-for="Name"></span>
+                <input type="text" asp-for="Register.UserName" placeholder="Username" />
+                <span asp-validation-for="Register.UserName"></span>
 
-            <input type="text" asp-for="UserName" placeholder="Username" />
-            <span asp-validation-for="UserName"></span>
+                <input type="email" asp-for="Register.Email" placeholder="Email" />
+                <span asp-validation-for="Register.Email"></span>
 
-            <input type="email" asp-for="Email" placeholder="Email" />
-            <span asp-validation-for="Email"></span>
+                <input type="password" asp-for="Register.Password" placeholder="Password" />
+                <span asp-validation-for="Register.Password"></span>
 
-            <input type="password" asp-for="Password" placeholder="Password" />
-            <span asp-validation-for="Password"></span>
+                <input type="password" asp-for="Register.ConfirmPassword" placeholder="Confirm Password" />
+                <span asp-validation-for="Register.ConfirmPassword"></span>
 
-            <button type="submit">Sign Up</button>
+                <button type="submit">Sign Up</button>
             </form>
         </div>
 
@@ -45,10 +44,14 @@
         <div class="form-container sign-in">
             <form asp-action="Login" method="post">
                 <h1>Sign In</h1>
-                <input type="email" asp-for="Email" placeholder="Email" />
-                <span asp-validation-for="Email"></span>
-                <input type="password" asp-for="Password" placeholder="Password" />
-                <span asp-validation-for="Password"></span>
+                <span>Use your account</span>
+
+                <input type="email" asp-for="Login.Email" placeholder="Email" />
+                <span asp-validation-for="Login.Email"></span>
+
+                <input type="password" asp-for="Login.Password" placeholder="Password" />
+                <span asp-validation-for="Login.Password"></span>
+
                 <button type="submit">Sign In</button>
             </form>
         </div>
@@ -56,19 +59,15 @@
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details.</p>
+                    <h1>Already have an account? Sign in here.</h1>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
                 <div class="toggle-panel toggle-right">
-                    <h1>Hello, Coder!</h1>
-                    <p>Register with your personal details.</p>
+                    <h1>Create an account to start your journey.</h1>
                     <button class="hidden" id="registeration">Sign Up</button>
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <script src="~/js/script.js" asp-append-version="true"></script>

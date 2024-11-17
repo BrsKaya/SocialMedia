@@ -3,6 +3,14 @@ body {
     background-color: #ffffff; /* Sayfa arka plan rengi */
     background: linear-gradient(to bottom right, #e2e2e2, #adbffc);
 }
+
+.no-underline{
+
+    text-decoration: none !important;
+    color: #000000; 
+}
+
+
 .navbar-brand {
     background-color: rgb(124, 147, 250);
     font-weight: bold;
@@ -88,3 +96,4 @@ body {
 .btn-spacing {
     margin-right: 20px; /* Like ve Comment butonları arası boşluk */
 }
+

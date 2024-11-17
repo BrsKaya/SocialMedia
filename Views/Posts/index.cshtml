@@ -33,16 +33,14 @@
                         <!-- Nick, Content, PublishedOn -->
                         <div class="col-7">
                             <h5>
-                                @post.User.UserName
+                                <a href="/profile/@post.User.UserName" class="no-underline">@post.User.UserName</a>
                                 <span class="text-muted" style="font-size: 0.6em;">(@post.PublishedOn.ToString("g"))</span>
                             </h5>
                             <p>@post.Content</p>
 
                             <!-- Like and Comment Buttons -->
                             <div class="mt-2">
-                                <button class="btn btn-light btn-sm btn-spacing">
-                                    <i class="bi bi-heart"></i>
-                                </button>
+                                
 
                                 <a href="/posts/@post.Url" class="post-link">
                                     <button class="btn btn-light btn-sm btn-spacing">
@@ -60,8 +58,10 @@
         </div>
 
         <div class="col-lg-4">
-            <vc:new-posts></vc:new-posts>
+            <vc:trending-hashtags></vc:trending-hashtags>
         </div>
 
     </div>
 </div>
+
+

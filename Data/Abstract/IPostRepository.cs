@@ -8,6 +8,7 @@ namespace SocialMediaApp.Data.Abstract
         IQueryable<Post> Posts { get; }
         void CreatePost(Post post);
         void EditPost(Post post);
+        Task<Dictionary<string, int>> GetMostCommentedHashtagsAsync(int count);
     }
 
 }

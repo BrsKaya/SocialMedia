@@ -1,0 +1,27 @@
+@model Dictionary<string, int>
+
+<div class="card mt-3">
+    <div class="card-header">
+        <h5 class="card-title">Trending hashtags</h5>
+    </div>
+    <div class="card-body">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <div class="mb-3">
+                    <h6 class="mb-0">
+                        <a href="#">
+                            @item.Key 
+                        </a>
+                        <span class="text-muted">(@item.Value comments)</span> 
+                    </h6>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No hashtags to display.</p>
+        }
+    </div>
+</div>

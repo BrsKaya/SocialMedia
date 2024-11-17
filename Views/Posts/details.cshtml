@@ -14,10 +14,11 @@
 
                     <!-- Kullanıcı Adı, İçerik ve Yayınlanma Tarihi -->
                     <div class="col-7">
-                        <h5>@Model.User.UserName</h5>
+                        <h5><a href="/profile/@Model.User.UserName" class="no-underline">@Model.User.UserName</a></h5>
                         <p>@Model.Content</p>
                         <small class="text-muted">@Model.PublishedOn.ToString("dd.MM.yyyy HH:mm")</small>
                     </div>
+
                 </div>
             </div>
 
@@ -36,7 +37,6 @@
                         </div>
 
                     </div>
-                    <!-- Butonu sağa hizalama -->
                     <div class="d-flex justify-content-end">
                         <button id="btnCommentSave" type="submit" class="btn btn-primary">Comment</button>
                     </div>
@@ -59,7 +59,7 @@
                                     alt="User Avatar">
                                 <div>
                                     <div class="mb-2 d-flex">
-                                        <h6 class="me-2">@comment.User.UserName</h6>
+                                        <h6 class = "me-2"><a href="/profile/@comment.User.UserName" class="no-underline">@comment.User.UserName</a></h6>
                                         <h6 class="text-muted" style="font-size: 0.900rem;">
                                             @comment.PublishedOn.ToString("dd.MM.yyyy HH:mm")</h6>
                                     </div>
@@ -73,9 +73,8 @@
             </div>
         </div>
 
-        <!-- Yeni Gönderiler Bölümü -->
         <div class="col-lg-4">
-            <vc:new-posts></vc:new-posts>
+            <vc:trending-hashtags></vc:trending-hashtags>
         </div>
     </div>
 </div>
@@ -100,17 +99,17 @@
                         var formattedTime = date.toLocaleTimeString("tr-TR", { hour: '2-digit', minute: '2-digit' });
 
                         $("#comments").prepend(`
-                                    <div class="my-4 d-flex">
-                                        <img src="/img/${comment.avatar}" alt="User Avatar" class="avatar rounded-circle float-start me-3">
-                                        <div>
-                                            <div class="mb-2 d-flex">
-                                                <h6 class="me-2">${comment.username}</h6>
-                                                <small>${formattedDate} ${formattedTime}</small>
+                                        <div class="my-4 d-flex">
+                                            <img src="/img/${comment.avatar}" alt="User Avatar" class="avatar rounded-circle float-start me-3">
+                                            <div>
+                                                <div class="mb-2 d-flex">
+                                                    <h6 class="me-2">${comment.username}</h6>
+                                                    <small>${formattedDate} ${formattedTime}</small>
+                                                </div>
+                                                <p>${comment.text}</p>
                                             </div>
-                                            <p>${comment.text}</p>
                                         </div>
-                                    </div>
-                                `);
+                                    `);
 
                         $("#Text").val('');  // Yorum kutusunu temizle
 

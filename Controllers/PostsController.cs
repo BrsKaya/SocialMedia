@@ -23,7 +23,7 @@ namespace SocialMediaApp.Controllers
         public async Task<IActionResult> Index()
         {
             var posts = _postRepository.Posts
-                .Where(i => i.IsActive)  
+                .Where(i => i.IsActive)
                 .Include(p => p.Comments)
                 .Include(p => p.User);
 
@@ -87,11 +87,18 @@ namespace SocialMediaApp.Controllers
         [Route("/Create")]
         public IActionResult Create(PostCreateViewModel model)
         {
+            if (string.IsNullOrWhiteSpace(model.Content))
+            {
+                // Eğer içerik boşsa, hata mesajı ekle ve aynı sayfayı geri döndür.
+                ModelState.AddModelError("Content", "Content cannot be empty.");
+                return View(model);
+            }
+
             if (ModelState.IsValid)
             {
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                Random random = new Random(); // rastgele bir tam sayı oluşturma
-                int randomNumber = random.Next(100000, 999999); // 100000 ile 999999 arasında rastgele bir sayı(6 haneli)
+                Random random = new Random();
+                int randomNumber = random.Next(100000, 999999); // 6 haneli rastgele sayı oluştur.
 
                 _postRepository.CreatePost(
                     new Post
@@ -107,8 +114,10 @@ namespace SocialMediaApp.Controllers
 
                 return RedirectToAction("Index");
             }
+
             return View(model);
         }
+
 
         [Authorize]
         public async Task<IActionResult> List()
